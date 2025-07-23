@@ -1,0 +1,62 @@
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+}
+
+/* Position with z-index BD-flag */
+.flag-green {
+  height: 300px;
+  width: 500px;
+  background-color: green;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.flag-rounded-red {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.flag-rounded-white {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-sizing {
+  background-color: purple;
+  height: 700px;
+  width: 700px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 15px;
+  margin-top: 60px;
+}
+.content-box {
+  background-color: red;
+  height: 300px;
+  width: 300px;
+  box-sizing: content-box;
+  padding: 60px;
+}
+.border-box {
+  background-color: green;
+  height: 300px;
+  width: 300px;
+  box-sizing: border-box;
+  padding: 60px;
+}
