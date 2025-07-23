@@ -17,6 +17,9 @@
   color: white;
   border: none;
 }
+img {
+  max-width: 100%;
+}
 /* Custom Styles */
 .banner {
   display: flex;
@@ -28,6 +31,10 @@
 }
 .banner-left {
   padding: 45px;
+  flex: 1;
+}
+.banner-right {
+  flex: 1;
 }
 .banner h2 {
   font-size: 70px;
@@ -69,6 +76,7 @@
   color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
 }
 .upcoming-matches-right .card {
   border: 1px solid rgb(232, 232, 232);
@@ -99,4 +107,47 @@
   color: #161616;
   display: flex;
   gap: 30px;
+}
+
+/* For laptop / Tab Display */
+@media screen and (max-width: 992px) {
+  /* Banner */
+  .banner h2 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  /* Upcoming Matches */
+  .upcoming-matches {
+    flex-direction: column;
+  }
+  .upcoming-matches-left {
+    flex-direction: row;
+    width: 100%;
+    background-color: transparent;
+  }
+  .upcoming-matches-left * {
+    flex: 1;
+  }
+  .upcoming-matches-left .btn {
+    border: 1px solid rgba(232, 232, 232, 1);
+  }
+  .upcoming-matches-right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Screen */
+@media screen and (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner .banner-left {
+    margin-bottom: 20px;
+  }
+  .banner .banner-left p {
+    max-width: 100%;
+    margin: 15px auto;
+  }
 }
